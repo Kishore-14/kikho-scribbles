@@ -27,7 +27,7 @@ int main()
 	for(i=0;i<m;i++)
 	{
 		for(j=0;j<n;j++)
-		{
+		{	
 			if(i!=j)
 			{
 				if(a[i][j]>0)
@@ -36,4 +36,13 @@ int main()
 			break;
 		}
 	}
+	for(i=0;i<m;i++)
+	{
+		for(j=0;j<n;j++)
+		{
+			if(a[i][j]=a[j][i])
+			printf("\nThe given matrix is not singular");
+		}
+	}
+	return 0;
 }
