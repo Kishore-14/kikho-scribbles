@@ -1,0 +1,61 @@
+#include<stdio.h>
+int i,a,b;
+struct student{
+	char name[20],dept[15],course[20];
+	int roll,year;
+}s[3];
+int roll_()
+{			
+				printf("\nEnter the roll number : ");
+				scanf("%d",&b);
+				printf("\nRoll number : %d",b);
+				printf("\nName\t: %s",s[b].name);
+				printf("\nYear\t: %d",s[b].year);
+				printf("\nDept\t: %s",s[b].dept);
+				printf("\nCourse\t: %s",s[b].course);
+			}
+int data_()
+{
+	printf("\nEnter the year : ");
+	scanf("%d",&b);
+	for(i=1;i<4;i++)
+	{
+		if(b==s[i].year)
+			{
+				printf("\nRoll number : %d",i);
+				printf("\nName\t: %s",s[i].name);
+				printf("\nYear\t: %d",s[i].year);
+				printf("\nDept\t: %s",s[i].dept);
+				printf("\nCourse\t: %s",s[i].course);	
+			}
+	}
+}			
+int main()
+{	
+	printf("Enter the details : ");
+	for(i=0;i<3;i++)
+	{
+		printf("\nRoll number\t: %d",i+1);
+		printf("\nEnter the name\t: ");
+		scanf("%s",s[i+1].name);
+		printf("Enter the year\t: ");
+		scanf("%d",&s[i+1].year);
+		printf("Enter the dept\t: ");
+		scanf("%s",s[i+1].dept);
+		printf("Enter the course: ");
+		scanf("%s",&s[i+1].course);
+	}
+	printf("\nChoose the operation : ");
+	printf("\n1.To search for a particular student ");
+	printf("\n1.To search for students joined in a particular year ");
+	printf("\nEnter the operation : ");
+	scanf("%d",&a);
+	switch (a)
+	{
+		case 1:
+			roll_();		
+		case 2:
+			data_();	
+	}
+	return 0;
+}
