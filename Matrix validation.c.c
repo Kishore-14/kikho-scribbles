@@ -1,8 +1,8 @@
 #include<stdio.h>
 int main()
 {	
-	printf("To check\n1.All diagonal elements are postive"
-	"\n");
+	printf("To check\n1.All diagonal elements are postive\n2.All non diagonal elements are negative"
+	"\n3.The given matrix is symmetric\n");
 	int i,j,m,n,a[10][10];
 	printf("\nEnter the number of rows and columns : ");
 	scanf("%d%d",&m,&n);
@@ -32,17 +32,20 @@ int main()
 			{
 				if(a[i][j]>0)
 				printf("\nAll non diagonal elements are not negative ");
+				break;
 			}
-			break;
-		}
+		}break;
 	}
 	for(i=0;i<m;i++)
 	{
 		for(j=0;j<n;j++)
 		{
-			if(a[i][j]=a[j][i])
-			printf("\nThe given matrix is not singular");
-		}
+			if(a[i][j]!=a[j][i])
+			{
+				printf("\nThe given matrix is not singular");
+				break;
+			}
+		}break;
 	}
 	return 0;
 }
