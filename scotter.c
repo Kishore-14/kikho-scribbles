@@ -8,7 +8,7 @@ int main()
 { 	
 	int i;
     FILE *fp;
-    fp=fopen("vehicle.txt","a");
+    fp=fopen("vehicle.txt","w");
 	printf("Enter The records of the Scooter:\n\n");
 	for(i=1;i<10;i++)
 	{
